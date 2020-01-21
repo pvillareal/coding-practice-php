@@ -2,8 +2,10 @@
 
 
 use PHPUnit\Framework\TestCase;
+use pvillareal\BfsIterator;
 use pvillareal\BreadthFirstSearchIterator;
 use pvillareal\DepthFirstSearchIterator;
+use pvillareal\DfsIterator;
 use pvillareal\Node;
 
 class SimpleTreeTest extends TestCase
@@ -39,9 +41,33 @@ class SimpleTreeTest extends TestCase
         $this->assertEquals("5,2,9,1,4,8,11,3", $resultString);
     }
 
+    public function testBfsIterator()
+    {
+        $bfs = new BfsIterator($this->tree);
+        $result = [];
+        /** @var Node $node */
+        foreach ($bfs as $node) {
+            $result[] = $node->getValue();
+        }
+        $resultString = implode(",", $result);
+        $this->assertEquals("5,2,9,1,4,8,11,3", $resultString);
+    }
+
     public function testDepthFirstSearchIterator()
     {
         $dfs = new DepthFirstSearchIterator($this->tree);
+        $result = [];
+        /** @var Node $node */
+        foreach ($dfs as $node) {
+            $result[] = $node->getValue();
+        }
+        $resultString = implode(",", $result);
+        $this->assertEquals("5,2,1,4,3,9,8,11", $resultString);
+    }
+
+    public function testDfsIterator()
+    {
+        $dfs = new DfsIterator($this->tree);
         $result = [];
         /** @var Node $node */
         foreach ($dfs as $node) {
