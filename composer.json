@@ -1,0 +1,18 @@
+{
+  "name": "villareal.ph/coding_practice",
+  "description": "Coding algorithms with PHP",
+  "minimum-stability": "dev",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Philippe Louis Villareal",
+      "email": "villareal.philippe@gmail.com"
+    }
+  ],
+  "require": {
+    "phpunit/phpunit": "8.5.2"
+  },
+  "autoload": {
+    "psr-4": {"pvillareal\\": "src/"}
+  }
+}
