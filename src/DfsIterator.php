@@ -9,7 +9,7 @@ class DfsIterator implements \Iterator
     protected $current;
     protected $cache;
     protected $tree;
-    protected $key;
+    protected $key = 0;
 
     public function __construct(Node $tree)
     {
