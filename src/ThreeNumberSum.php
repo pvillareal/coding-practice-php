@@ -17,8 +17,7 @@ class ThreeNumberSum
             while ($left < $right) {
                 $value = $array[$i] + $array[$left] + $array[$right];
                 if ($value === $total) {
-                    $values = [$array[$i], $array[$left], $array[$right]];
-                    array_push($result, $values);
+                    $result[] = [$array[$i], $array[$left], $array[$right]];
                     $right--;
                     $left++;
                 }

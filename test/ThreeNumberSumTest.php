@@ -17,4 +17,15 @@ class ThreeNumberSumTest extends TestCase
         $this->assertContainsEquals([-6, 1, 5], $result);
         $this->assertContainsEquals([-8, 3, 5], $result);
     }
+
+    public function testScenario2()
+    {
+        $array = [12,1,0,-12,-6,5,-5,6];
+        $total = 1;
+        $tns = new ThreeNumberSum();
+        $result = $tns->findTriplets($array, $total);
+        $this->assertContainsEquals([-5, 1, 5], $result);
+        $this->assertContainsEquals([-6, 1, 6], $result);
+        $this->assertContainsEquals([-12, 1, 12], $result);
+    }
 }
