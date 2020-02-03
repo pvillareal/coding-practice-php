@@ -3,4 +3,4 @@ This is a personal repository filled with the interview questions I was asked an
 
 ### Why create something like this?
 A personal reminder that I am not dumb and I tend to over-think solutions. Hopefully if I ever encounter these questions
-again, I can be calm about answering them.
+again, I can calm down and be reminded of how I approached the problem.
