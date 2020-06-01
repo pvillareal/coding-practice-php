@@ -13,6 +13,9 @@
     "phpunit/phpunit": "8.5.2"
   },
   "autoload": {
-    "psr-4": {"pvillareal\\": "src/"}
+    "psr-4": {
+      "pvillareal\\": "src/",
+      "pvillareal\\knighttopawn\\": "src/knighttopawn/"
+    }
   }
 }
