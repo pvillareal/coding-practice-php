@@ -4,14 +4,9 @@
 namespace pvillareal\knighttopawn;
 
 
-use http\Exception\InvalidArgumentException;
-
 class Board
 {
-    /**
-     * @var array
-     */
-    protected $board;
+    protected array $board;
 
     /**
      * Board constructor.
@@ -26,7 +21,7 @@ class Board
      * @param Unit $unit
      * @param string $column
      * @param string $row
-     * Moves a unit onto a position on the board
+     * Moves a unit onto a position on the board,
      * the board uses letters as columns and numbers as rows
      * @return Unit
      */
@@ -53,7 +48,7 @@ class Board
         return $this->board[$column][$row];
     }
 
-    public function pick(string $column, string $row)
+    public function pick(string $column, string $row): Unit
     {
         $unit = $this->check($column, $row);
         $this->board[$column][$row] = null;
