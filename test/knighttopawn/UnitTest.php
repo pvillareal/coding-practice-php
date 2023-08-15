@@ -2,6 +2,7 @@
 
 
 use PHPUnit\Framework\TestCase;
+use pvillareal\knighttopawn\Knight;
 use pvillareal\knighttopawn\Unit;
 
 class UnitTest extends TestCase
@@ -15,7 +16,7 @@ class UnitTest extends TestCase
 
     public function setup() : void
     {
-        $this->unit = new Unit();
+        $this->unit = new Knight();
     }
 
     public function testUnitLocation()

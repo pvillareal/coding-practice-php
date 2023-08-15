@@ -5,6 +5,7 @@ namespace pvillareal;
 
 
 use FilesystemIterator;
+use SplFileInfo;
 
 class FileAndFolderCount
 {
@@ -27,7 +28,7 @@ class FileAndFolderCount
     private function countItems($path)
     {
         $rdi = new \FilesystemIterator($path, FilesystemIterator::SKIP_DOTS);
-        /** @var \SplFileInfo $file */
+        /** @var SplFileInfo $file */
         foreach ($rdi as $file) {
             if ($file->isDir()) {
                 $this->folders++;

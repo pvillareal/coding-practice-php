@@ -9,8 +9,13 @@
       "email": "villareal.philippe@gmail.com"
     }
   ],
+  "config": {
+    "platform": {
+      "php": "8.2"
+    }
+  },
   "require": {
-    "phpunit/phpunit": "8.5.2"
+    "phpunit/phpunit": "*"
   },
   "autoload": {
     "psr-4": {

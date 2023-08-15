@@ -2,6 +2,7 @@
 
 use PHPUnit\Framework\TestCase;
 use pvillareal\knighttopawn\Board;
+use pvillareal\knighttopawn\Knight;
 use pvillareal\knighttopawn\Unit;
 
 class BoardTest extends TestCase
@@ -51,7 +52,7 @@ class BoardTest extends TestCase
      */
     public function testBoardMove()
     {
-        $this->board->move(new Unit("Horse"), 'a', '1');
+        $this->board->move(new Knight(), 'a', '1');
         $this->assertInstanceOf(Unit::class, $this->board->check('a', '1'));
     }
 
@@ -60,7 +61,7 @@ class BoardTest extends TestCase
      */
     public function testBoardPick()
     {
-        $this->board->move(new Unit("Horse"), 'a', '1');
+        $this->board->move(new Knight(), 'a', '1');
         $this->assertInstanceOf(Unit::class, $this->board->pick('a', '1'));
         $this->assertEmpty($this->board->check('a', '1'));
     }
