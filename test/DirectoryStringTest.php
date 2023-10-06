@@ -1,8 +1,10 @@
 <?php
 
 
-use pvillareal\DirectoryString;
+namespace test;
+
 use PHPUnit\Framework\TestCase;
+use pvillareal\DirectoryString;
 
 class DirectoryStringTest extends TestCase
 {
