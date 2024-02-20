@@ -32,7 +32,7 @@ class FileAndFolderCount
         foreach ($rdi as $file) {
             if ($file->isDir()) {
                 $this->folders++;
-                $this->countItems($file->getFilename());
+                $this->countItems($file->getRealPath());
             } else {
                 $this->files++;
             }

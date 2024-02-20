@@ -15,7 +15,7 @@
     }
   },
   "require": {
-    "phpunit/phpunit": "*"
+    "phpunit/phpunit": "10.*"
   },
   "require-dev": {
     "rector/rector": "1.0.1"
@@ -24,6 +24,7 @@
     "psr-4": {
       "pvillareal\\": "src/",
       "pvillareal\\knighttopawn\\": "src/knighttopawn/"
-    }
+    },
+    "files": ["config.php"]
   }
 }
