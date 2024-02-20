@@ -35,16 +35,12 @@ class DfsIterator implements \Iterator
      * @return void Any returned value is ignored.
      * @since 5.0.0
      */
-    public function next()
+    public function next(): void
     {
         if (!empty($this->current->getRight())) {
             $this->cache[] = $this->current->getRight();
         }
-        if (empty($this->current->getLeft())) {
-            $this->current = array_pop($this->cache);
-        } else {
-            $this->current = $this->current->getLeft();
-        }
+        $this->current = empty($this->current->getLeft()) ? array_pop($this->cache) : $this->current->getLeft();
         $this->key++;
     }
 
@@ -77,7 +73,7 @@ class DfsIterator implements \Iterator
      * @return void Any returned value is ignored.
      * @since 5.0.0
      */
-    public function rewind()
+    public function rewind(): void
     {
         $this->current = $this->tree;
     }

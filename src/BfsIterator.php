@@ -35,7 +35,7 @@ class BfsIterator implements \Iterator
      * @return void Any returned value is ignored.
      * @since 5.0.0
      */
-    public function next()
+    public function next(): void
     {
         if (!empty($this->current->getLeft())) {
             $this->cache[] = $this->current->getLeft();
@@ -76,7 +76,7 @@ class BfsIterator implements \Iterator
      * @return void Any returned value is ignored.
      * @since 5.0.0
      */
-    public function rewind()
+    public function rewind(): void
     {
         $this->current = $this->tree;
     }

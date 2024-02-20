@@ -5,14 +5,14 @@ use pvillareal\OptimizedAccess;
 
 class OptimizedAccessTest extends \PHPUnit\Framework\TestCase
 {
-    public function testRemoveNoValue()
+    public function testRemoveNoValue(): void
     {
         $this->expectException(\InvalidArgumentException::class);
         $os = new OptimizedAccess();
         $os->remove("a");
     }
 
-    public function testAdd()
+    public function testAdd(): void
     {
         $oa = new OptimizedAccess();
         $oa->add("a");
@@ -26,7 +26,7 @@ class OptimizedAccessTest extends \PHPUnit\Framework\TestCase
     /**
      * This test has a 1/1024 odds of failing due to the random generator
      */
-    public function testRemove()
+    public function testRemove(): void
     {
         $oa = new OptimizedAccess();
         $oa->add("a");
@@ -60,7 +60,7 @@ class OptimizedAccessTest extends \PHPUnit\Framework\TestCase
     /**
      * This test has a 1/1024 odds of failing due to the random generator
      */
-    public function testGetRandom()
+    public function testGetRandom(): void
     {
         $oa = new OptimizedAccess();
         $oa->add("a");

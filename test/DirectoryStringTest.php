@@ -9,7 +9,7 @@ use pvillareal\DirectoryString;
 class DirectoryStringTest extends TestCase
 {
 
-    public function testMoveToFolderFromCurrent()
+    public function testMoveToFolderFromCurrent(): void
     {
         $ds = new DirectoryString();
         $test = $ds->getDirString("/", "hello");
@@ -19,7 +19,7 @@ class DirectoryStringTest extends TestCase
         $this->assertEquals("/hello/world", $test2);
     }
 
-    public function testMoveToFolderOnBasePath()
+    public function testMoveToFolderOnBasePath(): void
     {
         $ds = new DirectoryString();
         $test = $ds->getDirString("/simple", "/hello");
@@ -29,7 +29,7 @@ class DirectoryStringTest extends TestCase
         $this->assertEquals("/hello/world", $test2);
     }
 
-    public function testMoveOneFolderUp()
+    public function testMoveOneFolderUp(): void
     {
         $ds = new DirectoryString();
         $test = $ds->getDirString("/hello/world", "..");
@@ -42,7 +42,7 @@ class DirectoryStringTest extends TestCase
         $this->assertEquals("/", $test3);
     }
 
-    public function testCurrentFolder()
+    public function testCurrentFolder(): void
     {
         $ds = new DirectoryString();
         $test = $ds->getDirString("/hello/world", ".");

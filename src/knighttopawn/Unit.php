@@ -12,7 +12,7 @@ abstract class Unit
      */
     protected $path = [];
 
-    public function move(string $column, string $row)
+    public function move(string $column, string $row): void
     {
         $this->path[] = [$column, $row];
     }

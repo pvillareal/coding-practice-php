@@ -14,12 +14,12 @@ class BoardTest extends TestCase
         $this->board = new Board();
     }
     
-    public function testBoardExists()
+    public function testBoardExists(): void
     {
         $this->assertInstanceOf('pvillareal\knighttopawn\Board', $this->board);
     }
 
-    public function testCheckBoardGrid()
+    public function testCheckBoardGrid(): void
     {
         $columns = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
         foreach ($columns as $column) {
@@ -32,7 +32,7 @@ class BoardTest extends TestCase
     /**
      * @depends testCheckBoardGrid
      */
-    public function testBoardBoundsColumn()
+    public function testBoardBoundsColumn(): void
     {
         $this->expectExceptionObject(new InvalidArgumentException("column must be from a to b"));
         $this->board->check('i', 1);
@@ -41,7 +41,7 @@ class BoardTest extends TestCase
     /**
      * @depends testCheckBoardGrid
      */
-    public function testBoardBoundsRow()
+    public function testBoardBoundsRow(): void
     {
         $this->expectExceptionObject(new InvalidArgumentException("row must be from 1 to 8"));
         $this->board->check('a', 0);
@@ -50,7 +50,7 @@ class BoardTest extends TestCase
     /**
      * @depends testCheckBoardGrid
      */
-    public function testBoardMove()
+    public function testBoardMove(): void
     {
         $this->board->move(new Knight(), 'a', '1');
         $this->assertInstanceOf(Unit::class, $this->board->check('a', '1'));
@@ -59,7 +59,7 @@ class BoardTest extends TestCase
     /**
      * @depends testBoardMove
      */
-    public function testBoardPick()
+    public function testBoardPick(): void
     {
         $this->board->move(new Knight(), 'a', '1');
         $this->assertInstanceOf(Unit::class, $this->board->pick('a', '1'));

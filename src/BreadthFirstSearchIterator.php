@@ -19,7 +19,7 @@ class BreadthFirstSearchIterator implements \Iterator
     {
         $temp = [];
         $temp[] = $tree;
-        while(!empty($temp)) {
+        while($temp !== []) {
             $node = array_shift($temp);
             /** @var Node $node */
             $this->map[] = $node;
@@ -49,7 +49,7 @@ class BreadthFirstSearchIterator implements \Iterator
      * @return void Any returned value is ignored.
      * @since 5.0.0
      */
-    public function next()
+    public function next(): void
     {
         $this->key++;
     }
@@ -74,10 +74,7 @@ class BreadthFirstSearchIterator implements \Iterator
      */
     public function valid()
     {
-        if ($this->key() < count($this->map)) {
-            return true;
-        }
-        return false;
+        return $this->key() < count($this->map);
     }
 
     /**
@@ -86,7 +83,7 @@ class BreadthFirstSearchIterator implements \Iterator
      * @return void Any returned value is ignored.
      * @since 5.0.0
      */
-    public function rewind()
+    public function rewind(): void
     {
         $this->key = 0;
     }

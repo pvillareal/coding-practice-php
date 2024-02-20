@@ -16,7 +16,7 @@ class KnightTest extends TestCase
         $this->knight = new Knight();
     }
 
-    public function testKnightLegalMoves()
+    public function testKnightLegalMoves(): void
     {
         $this->knight->move('a', '1');
         $this->assertContainsEquals(['b', '3'], $this->knight->getLegalMoves());

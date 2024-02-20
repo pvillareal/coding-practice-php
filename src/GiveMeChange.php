@@ -33,7 +33,7 @@ class GiveMeChange
         $val = $this->value;
         foreach ($this->denomination as $denom) {
             $result[$denom] = floor($val / $denom);
-            $val = $val - ($result[$denom] * $denom);
+            $val -= $result[$denom] * $denom;
         }
         return $result;
     }

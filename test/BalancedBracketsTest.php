@@ -6,35 +6,35 @@ use pvillareal\BalancedBrackets;
 
 class BalancedBracketsTest extends TestCase
 {
-    public function testBalanceBrackets()
+    public function testBalanceBrackets(): void
     {
         $string = "(())(((())))";
         $bb = new BalancedBrackets($string);
         $this->assertTrue($bb->isBalanced());
     }
 
-    public function testUnBalanceBrackets()
+    public function testUnBalanceBrackets(): void
     {
         $string = "(())((())))";
         $bb = new BalancedBrackets($string);
         $this->assertFalse($bb->isBalanced());
     }
 
-    public function testWhenStartMultipleOpenningBrackets()
+    public function testWhenStartMultipleOpenningBrackets(): void
     {
         $string = "]]";
         $bb = new BalancedBrackets($string);
         $this->assertFalse($bb->isBalanced());
     }
 
-    public function testNotMatchingBrackets()
+    public function testNotMatchingBrackets(): void
     {
         $string = "(]";
         $bb = new BalancedBrackets($string);
         $this->assertFalse($bb->isBalanced());
     }
 
-    public function testDidNotCloseOneBracket()
+    public function testDidNotCloseOneBracket(): void
     {
         $string = "(()";
         $bb = new BalancedBrackets($string);

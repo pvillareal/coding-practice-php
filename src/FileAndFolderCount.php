@@ -25,7 +25,7 @@ class FileAndFolderCount
         $this->countItems($path);
     }
 
-    private function countItems($path)
+    private function countItems($path): void
     {
         $rdi = new \FilesystemIterator($path, FilesystemIterator::SKIP_DOTS);
         /** @var SplFileInfo $file */

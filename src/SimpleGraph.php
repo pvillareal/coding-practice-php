@@ -23,7 +23,7 @@ class SimpleGraph
         return $this->graphs;
     }
 
-    private function processGraph(array $input)
+    private function processGraph(array $input): void
     {
         $map = [];
         foreach ($input as $assoc) {
@@ -32,7 +32,7 @@ class SimpleGraph
 
         $items = array_keys($map);
 
-        while (count($items) > 0) {
+        while ($items !== []) {
             $item = array_shift($items);
             $association = $map[$item];
             $list = [$item, $association];

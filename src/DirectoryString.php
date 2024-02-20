@@ -12,13 +12,13 @@ class DirectoryString
         $locStack = explode('/', $loc);
         $locStack = array_filter($locStack);
 
-        while(!empty($locStack)) {
+        while($locStack !== []) {
             $dir = array_shift($locStack);
             if ($dir === '.') {
                 continue;
             }
             if ($dir === '..') {
-                if (!empty($cwdStack)) {
+                if ($cwdStack !== []) {
                     array_pop($cwdStack);
                 }
                 continue;
@@ -26,7 +26,7 @@ class DirectoryString
             $cwdStack[] = $dir;
         }
         $resp = implode('/', $cwdStack);
-        return empty($resp) ? "/" : "/$resp";
+        return $resp === '' || $resp === '0' ? "/" : "/$resp";
     }
 
 }

@@ -46,10 +46,7 @@ class Knight extends Unit
         if (ord(strtolower($column)) < 97 || ord(strtolower($column)) > 104) {
             return false;
         }
-        if ($row < 1 || $row > 8) {
-            return false;
-        }
-        return true;
+        return $row >= 1 && $row <= 8;
     }
 
     private function moveUpRight()
@@ -57,7 +54,7 @@ class Knight extends Unit
         $loc = $this->getLocation();
         $column = chr(ord($loc[0]) + 1);
         $row = $loc[1] + 2;
-        $newLoc = [$column, strval($row)];
+        $newLoc = [$column, (string) $row];
         return $this->isOutofBounds($column, $row) ? $newLoc : false;
     }
 
@@ -66,7 +63,7 @@ class Knight extends Unit
         $loc = $this->getLocation();
         $column = chr(ord($loc[0]) - 1);
         $row = $loc[1] + 2;
-        $newLoc = [$column, strval($row)];
+        $newLoc = [$column, (string) $row];
         return $this->isOutofBounds($column, $row) ? $newLoc : false;
     }
 
@@ -75,7 +72,7 @@ class Knight extends Unit
         $loc = $this->getLocation();
         $column = chr(ord($loc[0]) + 2);
         $row = $loc[1] + 1;
-        $newLoc = [$column, strval($row)];
+        $newLoc = [$column, (string) $row];
         return $this->isOutofBounds($column, $row) ? $newLoc : false;
     }
 
@@ -84,7 +81,7 @@ class Knight extends Unit
         $loc = $this->getLocation();
         $column = chr(ord($loc[0]) + 2);
         $row = $loc[1] - 1;
-        $newLoc = [$column, strval($row)];
+        $newLoc = [$column, (string) $row];
         return $this->isOutofBounds($column, $row) ? $newLoc : false;
     }
 
@@ -93,7 +90,7 @@ class Knight extends Unit
         $loc = $this->getLocation();
         $column = chr(ord($loc[0]) + 1);
         $row = $loc[1] - 2;
-        $newLoc = [$column, strval($row)];
+        $newLoc = [$column, (string) $row];
         return $this->isOutofBounds($column, $row) ? $newLoc : false;
     }
 
@@ -102,7 +99,7 @@ class Knight extends Unit
         $loc = $this->getLocation();
         $column = chr(ord($loc[0]) - 1);
         $row = $loc[1] - 2;
-        $newLoc = [$column, strval($row)];
+        $newLoc = [$column, (string) $row];
         return $this->isOutofBounds($column, $row) ? $newLoc : false;
     }
 
@@ -111,7 +108,7 @@ class Knight extends Unit
         $loc = $this->getLocation();
         $column = chr(ord($loc[0]) - 2);
         $row = $loc[1] + 1;
-        $newLoc = [$column, strval($row)];
+        $newLoc = [$column, (string) $row];
         return $this->isOutofBounds($column, $row) ? $newLoc : false;
     }
 
@@ -120,7 +117,7 @@ class Knight extends Unit
         $loc = $this->getLocation();
         $column = chr(ord($loc[0]) - 2);
         $row = $loc[1] - 1;
-        $newLoc = [$column, strval($row)];
+        $newLoc = [$column, (string) $row];
         return $this->isOutofBounds($column, $row) ? $newLoc : false;
     }
 }

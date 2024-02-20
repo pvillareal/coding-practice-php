@@ -30,7 +30,7 @@ class NodesVisibleFromTheRightTest extends TestCase
         $this->tree = $main;
     }
 
-    public function testVisible()
+    public function testVisible(): void
     {
         $rightView = new RightSideView($this->tree);
         $result = [];

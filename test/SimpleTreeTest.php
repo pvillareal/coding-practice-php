@@ -29,7 +29,7 @@ class SimpleTreeTest extends TestCase
         $this->tree = $main;
     }
 
-    public function testBreadthFirstSearchIterator()
+    public function testBreadthFirstSearchIterator(): void
     {
         $bfs = new BreadthFirstSearchIterator($this->tree);
         $result = [];
@@ -41,7 +41,7 @@ class SimpleTreeTest extends TestCase
         $this->assertEquals("5,2,9,1,4,8,11,3", $resultString);
     }
 
-    public function testBfsIterator()
+    public function testBfsIterator(): void
     {
         $bfs = new BfsIterator($this->tree);
         $result = [];
@@ -53,7 +53,7 @@ class SimpleTreeTest extends TestCase
         $this->assertEquals("5,2,9,1,4,8,11,3", $resultString);
     }
 
-    public function testDepthFirstSearchIterator()
+    public function testDepthFirstSearchIterator(): void
     {
         $dfs = new DepthFirstSearchIterator($this->tree);
         $result = [];
@@ -65,7 +65,7 @@ class SimpleTreeTest extends TestCase
         $this->assertEquals("5,2,1,4,3,9,8,11", $resultString);
     }
 
-    public function testDfsIterator()
+    public function testDfsIterator(): void
     {
         $dfs = new DfsIterator($this->tree);
         $result = [];

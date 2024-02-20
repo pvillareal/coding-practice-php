@@ -44,12 +44,12 @@ class RightSideView implements Iterator
     /**
      * @inheritDoc
      */
-    public function next()
+    public function next(): void
     {
         $this->level++;
         if (!empty($this->current->getLeft())) {
-            array_push($this->cache, $this->current->getLeft());
-            array_push($this->levels, $this->level);
+            $this->cache[] = $this->current->getLeft();
+            $this->levels[] = $this->level;
         }
         if ($this->level > $this->maxLevel) {
             $this->maxLevel = $this->level;
@@ -85,7 +85,7 @@ class RightSideView implements Iterator
     /**
      * @inheritDoc
      */
-    public function rewind()
+    public function rewind(): void
     {
         $this->key = 0;
         $this->current = $this->tree;

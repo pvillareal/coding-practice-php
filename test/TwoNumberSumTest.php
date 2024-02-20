@@ -5,7 +5,7 @@ use pvillareal\TwoNumberSum;
 
 class TwoNumberSumTest extends TestCase
 {
-    public function testWhenNoValuesSumToTotal()
+    public function testWhenNoValuesSumToTotal(): void
     {
         $tns = new TwoNumberSum();
         $nums = [3, 5, 4, 2, 9, 1, 7];
@@ -13,7 +13,7 @@ class TwoNumberSumTest extends TestCase
         $this->assertEmpty($tns->TwoNumberSum($nums, $total));
     }
 
-    public function testCase1()
+    public function testCase1(): void
     {
         $tns = new TwoNumberSum();
         $nums = [3, 5, 4, 2, 9, 1, 7];
@@ -24,7 +24,7 @@ class TwoNumberSumTest extends TestCase
         $this->assertContains(9, $result);
     }
 
-    public function testCase2()
+    public function testCase2(): void
     {
         $tns = new TwoNumberSum();
         $nums = [3, 5, 4, 2, 9, 7, 11];

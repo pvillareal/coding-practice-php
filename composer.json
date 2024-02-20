@@ -17,6 +17,9 @@
   "require": {
     "phpunit/phpunit": "*"
   },
+  "require-dev": {
+    "rector/rector": "1.0.1"
+  },
   "autoload": {
     "psr-4": {
       "pvillareal\\": "src/",

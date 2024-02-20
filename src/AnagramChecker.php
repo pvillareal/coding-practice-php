@@ -15,7 +15,7 @@ class AnagramChecker
         foreach ($list as $anagram) {
             $anagramSplit = str_split($anagram);
             sort($anagramSplit);
-            if ($wordSplit == $anagramSplit) {
+            if ($wordSplit === $anagramSplit) {
                 $result[] = $anagram;
             }
         }

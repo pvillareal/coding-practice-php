@@ -18,12 +18,12 @@ class DepthFirstSearchIterator implements \Iterator
     {
         $temp = [];
         $temp[] = $tree;
-        while(!empty($temp)) {
+        while($temp !== []) {
             /** @var Node $node */
             $node = array_pop($temp);
             while (!empty($node)) {
                 if (!empty($node->getRight())) {
-                    array_push($temp, $node->getRight());
+                    $temp[] = $node->getRight();
                 }
                 $this->map[] = $node;
                 $node = $node->getLeft();
@@ -48,7 +48,7 @@ class DepthFirstSearchIterator implements \Iterator
      * @return void Any returned value is ignored.
      * @since 5.0.0
      */
-    public function next()
+    public function next(): void
     {
         $this->key++;
     }
@@ -82,7 +82,7 @@ class DepthFirstSearchIterator implements \Iterator
      * @return void Any returned value is ignored.
      * @since 5.0.0
      */
-    public function rewind()
+    public function rewind(): void
     {
         $this->key = 0;
     }

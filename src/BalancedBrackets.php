@@ -34,10 +34,10 @@ class BalancedBrackets
         for($i = 0; $i < strlen($this->string); $i++) {
             $char = $this->string[$i];
             if (in_array($char, $bracketMatch)) {
-                array_push($stack, $char);
+                $stack[] = $char;
             }
             if (array_key_exists($char, $bracketMatch)) {
-                if (empty($stack)) {
+                if ($stack === []) {
                     return false;
                 }
                 $openingChar = array_pop($stack);

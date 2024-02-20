@@ -18,13 +18,13 @@ class OptimizedAccess
     protected $map = [];
     protected $items = [];
 
-    public function add($item)
+    public function add($item): void
     {
         $this->items[] = $item;
         $this->map[$item] = count($this->items) - 1;
     }
 
-    public function remove($item)
+    public function remove($item): void
     {
         if (!array_key_exists($item, $this->map)) {
             throw new \InvalidArgumentException();

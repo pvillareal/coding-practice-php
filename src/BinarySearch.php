@@ -6,7 +6,7 @@ namespace pvillareal;
 
 class BinarySearch
 {
-    protected $cycles;
+    protected $cycles = 0;
     protected $result;
     protected static $try;
     /**
@@ -32,7 +32,6 @@ class BinarySearch
      */
     public function __construct(int $value, array $values)
     {
-        $this->cycles = 0;
         $this->index = $this->findIndex($value, $values);
     }
 

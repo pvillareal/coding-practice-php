@@ -20,7 +20,7 @@ class ShortestPathTest extends TestCase
     }
 
 
-    public function testShortPathKnight()
+    public function testShortPathKnight(): void
     {
         $board = new Board();
         $knight = new Knight();

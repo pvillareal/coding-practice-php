@@ -7,7 +7,7 @@ use pvillareal\AnagramChecker;
 class AnagramsTest extends TestCase
 {
 
-    public function testAnagrams()
+    public function testAnagrams(): void
     {
         $word = "post";
         $list = ["time", "pot", "stroke", "muck", "spot", "tos", "opts", "close", "tops", "pots"];

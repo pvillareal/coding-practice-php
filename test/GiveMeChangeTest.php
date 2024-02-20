@@ -7,7 +7,7 @@ use pvillareal\GiveMeChange;
 class GiveMeChangeTest extends TestCase
 {
 
-    public function testSimpleChange()
+    public function testSimpleChange(): void
     {
         $value = 32;
         $denomination = [1,5,10];
@@ -18,7 +18,7 @@ class GiveMeChangeTest extends TestCase
         $this->assertEquals(2, $result[1]);
     }
 
-    public function testCase1()
+    public function testCase1(): void
     {
         $value = 7;
         $denomination = [1,5,15];

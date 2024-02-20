@@ -7,7 +7,7 @@ use pvillareal\SimpleGraph;
 class SimpleGraphTest extends TestCase
 {
 
-    public function testGetGraphs()
+    public function testGetGraphs(): void
     {
         $sg = new SimpleGraph([
            ['item1', 'item2'], ['item3', 'item4'], ['item4', 'item5'], ['item5', 'item6']

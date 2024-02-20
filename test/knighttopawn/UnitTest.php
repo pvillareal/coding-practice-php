@@ -19,7 +19,7 @@ class UnitTest extends TestCase
         $this->unit = new Knight();
     }
 
-    public function testUnitLocation()
+    public function testUnitLocation(): void
     {
         $this->unit->move('a', '1');
         $loc = $this->unit->getLocation();
