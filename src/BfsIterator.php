@@ -24,7 +24,7 @@ class BfsIterator implements \Iterator
      * @return mixed Can return any type.
      * @since 5.0.0
      */
-    public function current()
+    public function current() : mixed
     {
         return $this->current;
     }
@@ -53,7 +53,7 @@ class BfsIterator implements \Iterator
      * @return mixed scalar on success, or null on failure.
      * @since 5.0.0
      */
-    public function key()
+    public function key() : int
     {
         return $this->key;
     }
@@ -65,7 +65,7 @@ class BfsIterator implements \Iterator
      * Returns true on success or false on failure.
      * @since 5.0.0
      */
-    public function valid()
+    public function valid() : bool
     {
         return $this->current() != null;
     }

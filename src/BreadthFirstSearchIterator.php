@@ -38,7 +38,7 @@ class BreadthFirstSearchIterator implements \Iterator
      * @return Node Can return any type.
      * @since 5.0.0
      */
-    public function current()
+    public function current() : Node
     {
         return $this->map[$this->key()];
     }
@@ -60,7 +60,7 @@ class BreadthFirstSearchIterator implements \Iterator
      * @return mixed scalar on success, or null on failure.
      * @since 5.0.0
      */
-    public function key()
+    public function key() : int
     {
         return $this->key;
     }
@@ -72,7 +72,7 @@ class BreadthFirstSearchIterator implements \Iterator
      * Returns true on success or false on failure.
      * @since 5.0.0
      */
-    public function valid()
+    public function valid() : bool
     {
         return $this->key() < count($this->map);
     }

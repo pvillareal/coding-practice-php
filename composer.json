@@ -14,11 +14,10 @@
       "php": "8.2"
     }
   },
-  "require": {
-    "phpunit/phpunit": "10.*"
-  },
   "require-dev": {
-    "rector/rector": "1.0.1"
+    "rector/rector": "1.0.1",
+    "phpunit/phpunit": "10.*",
+    "dg/bypass-finals": "*"
   },
   "autoload": {
     "psr-4": {

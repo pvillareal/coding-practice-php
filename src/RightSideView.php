@@ -36,7 +36,7 @@ class RightSideView implements Iterator
      * @inheritDoc
      * @return Node
      */
-    public function current()
+    public function current() : Node
     {
         return $this->current;
     }
@@ -69,7 +69,7 @@ class RightSideView implements Iterator
     /**
      * @inheritDoc
      */
-    public function key()
+    public function key() : int
     {
         return $this->key;
     }
@@ -77,7 +77,7 @@ class RightSideView implements Iterator
     /**
      * @inheritDoc
      */
-    public function valid()
+    public function valid() : bool
     {
         return !empty($this->current);
     }
