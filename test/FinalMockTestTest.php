@@ -9,7 +9,8 @@ class FinalMockTestTest extends TestCase
 
     public function testMock()
     {
-        // Uses "dg/bypass-finals" to "hack/remove" final and readonly keywords used by https://tester.nette.org/en/
+        // Uses "dg/bypass-finals" to "hack/remove" final and readonly keywords
+        // https://github.com/dg/bypass-finals/
         $mockFinalClass = $this->createStub(FinalMockTest::class);
         $mockFinalClass->method('getItem')->willReturn(2);
         self::assertTrue(2 == $mockFinalClass->getItem());
