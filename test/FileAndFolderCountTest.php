@@ -15,6 +15,6 @@ class FileAndFolderCountTest extends TestCase
     public function testGetFilesCount(): void
     {
         $ffc = new FileAndFolderCount(BASE_PATH . "/src");
-        $this->assertEquals(23, $ffc->getFilesCount());
+        $this->assertEquals(24, $ffc->getFilesCount());
     }
 }
