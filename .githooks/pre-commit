@@ -2,7 +2,7 @@
 <?php
 
 echo "Running tests.. ";
-exec('vendor/bin/phpunit', $output, $returnCode);
+exec('vendor/bin/phpunit --configuration phpunit.xml', $output, $returnCode);
 
 if ($returnCode !== 0) {
   // Show full output
