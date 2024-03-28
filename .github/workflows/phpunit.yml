@@ -23,6 +23,7 @@ jobs:
           php_extensions: xdebug
           bootstrap: vendor/autoload.php
           configuration: phpunit.xml
+          memory_limit: 256M
 
       - name: Make code coverage badge
         uses: timkrase/phpunit-coverage-badge@v1.2.1
