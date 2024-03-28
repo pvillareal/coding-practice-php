@@ -17,6 +17,7 @@
   "require-dev": {
     "rector/rector": "1.0.1",
     "phpunit/phpunit": "10.*",
+    "phpunit/php-code-coverage": "10.*",
     "dg/bypass-finals": "*"
   },
   "autoload": {

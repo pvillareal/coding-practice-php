@@ -1,3 +1,5 @@
 /.idea/
 /composer.lock
 /vendor/
+/html-coverage/
+/clover.xml

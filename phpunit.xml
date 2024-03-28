@@ -1,15 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<phpunit bootstrap = "vendor/autoload.php" displayDetailsOnTestsThatTriggerDeprecations="true">
-
-    <testsuites>
-        <testsuite name="Unit">
-            <directory>test</directory>
-        </testsuite>
-    </testsuites>
-
-    <extensions>
-        <bootstrap class="DG\BypassFinals\PHPUnitExtension"/>
-    </extensions>
-
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" bootstrap="vendor/autoload.php" displayDetailsOnTestsThatTriggerDeprecations="true" xsi:noNamespaceSchemaLocation="https://schema.phpunit.de/10.5/phpunit.xsd">
+  <testsuites>
+    <testsuite name="Unit">
+      <directory>test</directory>
+    </testsuite>
+  </testsuites>
+  <extensions>
+    <bootstrap class="DG\BypassFinals\PHPUnitExtension"/>
+  </extensions>
+  <coverage includeUncoveredFiles="true" pathCoverage="true" disableCodeCoverageIgnore="true">
+    <report>
+      <html outputDirectory="html-coverage" lowUpperBound="50" highLowerBound="90"/>
+      <clover outputFile="clover.xml" lowUpperBound="50" highLowerBound="90"/>
+    </report>
+  </coverage>
+  <source>
+    <include>
+      <directory>src</directory>
+    </include>
+  </source>
 </phpunit>
