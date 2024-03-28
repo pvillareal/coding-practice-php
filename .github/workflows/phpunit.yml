@@ -2,6 +2,9 @@ name: phpunit
 
 on: [push]
 
+env:
+  XDEBUG_MODE: coverage
+
 jobs:
   build-test:
     runs-on: ubuntu-latest
