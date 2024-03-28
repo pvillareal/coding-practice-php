@@ -17,4 +17,6 @@ jobs:
       - name: PHPUnit Tests
         uses: php-actions/phpunit@master
         with:
-          configuration: phpunit.xml
+          bootstrap: "vendor/autoload.php"
+          memory_limit: "256M"
+          configuration: "./phpunit.xml"
