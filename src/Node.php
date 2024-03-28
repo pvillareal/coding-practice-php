@@ -44,7 +44,7 @@ class Node
     /**
      * @return Node
      */
-    public function getRight()
+    public function getRight() : Node
     {
         return $this->right;
     }
