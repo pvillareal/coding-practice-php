@@ -15,8 +15,7 @@ jobs:
           dev: yes
 
       - name: PHPUnit Tests
-        uses: php-actions/phpunit@master
+        uses: php-actions/phpunit@v3.0.3
         with:
-          php_version: 8.3
           bootstrap: vendor/autoload.php
           configuration: phpunit.xml
