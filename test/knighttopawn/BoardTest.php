@@ -29,36 +29,24 @@ class BoardTest extends TestCase
         }
     }
 
-    /**
-     * @depends testCheckBoardGrid
-     */
     public function testBoardBoundsColumn(): void
     {
         $this->expectExceptionObject(new InvalidArgumentException("column must be from a to b"));
         $this->board->check('i', 1);
     }
 
-    /**
-     * @depends testCheckBoardGrid
-     */
     public function testBoardBoundsRow(): void
     {
         $this->expectExceptionObject(new InvalidArgumentException("row must be from 1 to 8"));
         $this->board->check('a', 0);
     }
 
-    /**
-     * @depends testCheckBoardGrid
-     */
     public function testBoardMove(): void
     {
         $this->board->move(new Knight(), 'a', '1');
         $this->assertInstanceOf(Unit::class, $this->board->check('a', '1'));
     }
 
-    /**
-     * @depends testBoardMove
-     */
     public function testBoardPick(): void
     {
         $this->board->move(new Knight(), 'a', '1');

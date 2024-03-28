@@ -26,7 +26,7 @@
     },
     "files": ["config.php"]
   },
-  "scripts": {
-    "test" : "/vendor/bin/phpunit --configuration phpunit.xml"
+  "require": {
+    "": ""
   }
 }
