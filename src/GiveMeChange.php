@@ -26,7 +26,7 @@ class GiveMeChange
         $this->denomination = $denomination;
     }
 
-    public function giveChange()
+    public function giveChange() : array
     {
         $result = [];
         rsort($this->denomination);
