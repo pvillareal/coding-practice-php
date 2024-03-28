@@ -19,6 +19,5 @@ jobs:
         with:
           php_version: 8.3
           bootstrap: vendor/autoload.php
-          vendored_phpunit_path: vendor/bin/phpunit
           memory_limit: 256M
           configuration: phpunit.xml
