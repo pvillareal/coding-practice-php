@@ -18,7 +18,7 @@ class SimpleGraph
         $this->processGraph($input);
     }
 
-    public function getGraphs()
+    public function getGraphs() : array
     {
         return $this->graphs;
     }
