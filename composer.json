@@ -25,8 +25,5 @@
       "pvillareal\\knighttopawn\\": "src/knighttopawn/"
     },
     "files": ["config.php"]
-  },
-  "require": {
-    "": ""
   }
 }
