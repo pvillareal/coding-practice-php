@@ -16,28 +16,26 @@ class LRUCache {
 
     /**
      * @param Integer $key
-     * @return Integer
+     * @return bool|int
      */
-    function get($key) {
+    function get(int $key) : bool|int {
         if (array_key_exists($key, $this->cache)) {
             $this->pushKey($key);
             return $this->cache[$key];
         }
-        return -1;
+        return false;
     }
 
     /**
      * @param Integer $key
      * @param Integer $value
-     * @return NULL
      */
-    function put($key, $value) {
+    function put(int $key, int $value) : void {
         $removed = $this->pushKey($key);
-        if ($removed) {
+        if ($removed !== false) {
             unset($this->cache[$removed]);
         }
         $this->cache[$key] = $value;
-        return null;
     }
 
     private function pushKey($key) {
@@ -47,11 +45,9 @@ class LRUCache {
         }
         $lruKey = array_search($key, $this->lru);
         if ($lruKey) {
-            echo($lruKey);
-            var_dump($this->lru);
             unset($this->lru[$lruKey]);
             array_unshift($this->lru, $key);
-            return false;
+            return $this->cache[$lruKey];
         } else {
             $lastKey = array_pop($this->lru);
             array_unshift($this->lru, $key);
