@@ -16,4 +16,10 @@ class FinalMockTestTest extends TestCase
         self::assertTrue(2 == $mockFinalClass->getItem());
     }
 
+    public function testFinalMockRealGetItem()
+    {
+        $finalMock = new FinalMockTest();
+        self::assertTrue(1 == $finalMock->getItem());
+    }
+
 }
