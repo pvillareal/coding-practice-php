@@ -20,7 +20,7 @@ class BalancedBrackets
         $this->string = $string;
     }
 
-    public function isBalanced()
+    public function isBalanced() : bool
     {
         if (strlen($this->string) % 2 === 1) {
             return false;
