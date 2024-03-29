@@ -11,7 +11,7 @@ alias composer="docker run --rm --interactive --tty --volume $PWD:/app composer/
 ```
 
 ### Docker
-I included the Docker environment that I use to run and test the solutions. Instructions to add to local on DockerHub(https://hub.docker.com/r/pvillareal/php)
+I included the Docker environment that I use to run and test the solutions. Instructions to add to local on [DockerHub](https://hub.docker.com/r/pvillareal/php)
 ```bash
 docker pull pvillareal/php:8.3-cli
 ```
