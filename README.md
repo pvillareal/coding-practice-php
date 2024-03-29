@@ -1,5 +1,6 @@
 # About This Repo
 This is a personal repository filled with the interview questions I was asked and failed to answer.
+In a way I guess this is also proof to myself that I know I can answer those questions and I know that interviews can be a bit hard and draining sometimes.
 
 ### Why create something like this?
 Practice makes perfect, giving myself some time to produce and perfect the solutions I am thinking of during the interviews.
