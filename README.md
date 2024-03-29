@@ -6,11 +6,13 @@ Practice makes perfect, giving myself some time to produce and perfect the solut
 
 ### Composer
 Tired of having the phar file onto your computer. Add this to your `~/bash_profile`.
-```
+```bash
 alias composer="docker run --rm --interactive --tty --volume $PWD:/app composer/composer"
 ```
 
 ### Docker
-I included the Docker environment that I use to run and test the solutions.
-`docker pull pvillareal/php:8.3-cli`
+I included the Docker environment that I use to run and test the solutions. Instructions to add to local on DockerHub(https://hub.docker.com/r/pvillareal/php)
+```bash
+docker pull pvillareal/php:8.3-cli
+```
 
