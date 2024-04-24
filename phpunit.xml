@@ -14,9 +14,9 @@
 <!--      <clover outputFile="clover.xml"/>-->
 <!--    </report>-->
 <!--  </coverage>-->
-  <source>
-    <include>
-      <directory>src</directory>
-    </include>
-  </source>
+<!--  <source>-->
+<!--    <include>-->
+<!--      <directory>src</directory>-->
+<!--    </include>-->
+<!--  </source>-->
 </phpunit>
