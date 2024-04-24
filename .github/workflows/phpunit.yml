@@ -18,16 +18,10 @@ jobs:
           dev: yes
 
       - name: PHPUnit Tests
-        uses: php-actions/phpunit@v3.0.3
+        uses: php-actions/phpunit@v9
         with:
-          version: 10.5.19
+          version: 9.6.19
           php_extensions: xdebug
           bootstrap: vendor/autoload.php
           configuration: phpunit.xml
           memory_limit: 512M
-
-#      - name: Make code coverage badge
-#        uses: timkrase/phpunit-coverage-badge@v1.2.1
-#        with:
-#          coverage_badge_path: output/coverage.svg
-#          push_badge: true

@@ -9,6 +9,7 @@ class FinalMockTestTest extends TestCase
 
     public function testMock()
     {
+        DG\BypassFinals::enable();
         // Uses "dg/bypass-finals" to "hack/remove" final and readonly keywords
         // https://github.com/dg/bypass-finals/
         $mockFinalClass = $this->createStub(FinalMockTest::class);

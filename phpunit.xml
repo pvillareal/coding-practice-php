@@ -5,9 +5,9 @@
       <directory>test</directory>
     </testsuite>
   </testsuites>
-  <extensions>
-    <bootstrap class="DG\BypassFinals\PHPUnitExtension"/>
-  </extensions>
+<!--  <extensions>-->
+<!--    <bootstrap class="DG\BypassFinals\PHPUnitExtension"/>-->
+<!--  </extensions>-->
 <!--  <coverage includeUncoveredFiles="true" pathCoverage="true" disableCodeCoverageIgnore="true">-->
 <!--    <report>-->
 <!--      <html outputDirectory="html-coverage" lowUpperBound="50" highLowerBound="90"/>-->
