@@ -28,4 +28,13 @@ class ThreeNumberSumTest extends TestCase
         $this->assertContainsEquals([-6, 1, 6], $result);
         $this->assertContainsEquals([-12, 1, 12], $result);
     }
+
+    public function testScenario3() : void
+    {
+        $array = [3, 7, 9, 11, 15, 17, 21, 23];
+        $total = 50;
+        $tns = new ThreeNumberSum();
+        $result = $tns->findTriplets($array, $total);
+        $this->assertFalse(count($result) > 0);
+    }
 }
