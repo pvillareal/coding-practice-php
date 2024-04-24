@@ -20,6 +20,7 @@ jobs:
       - name: PHPUnit Tests
         uses: php-actions/phpunit@v3.0.3
         with:
+          version: 10.5.19
           php_extensions: xdebug
           bootstrap: vendor/autoload.php
           configuration: phpunit.xml
