@@ -35,6 +35,6 @@ class ThreeNumberSumTest extends TestCase
         $total = 50;
         $tns = new ThreeNumberSum();
         $result = $tns->findTriplets($array, $total);
-        $this->assertFalse(count($result) > 0);
+        $this->assertEmpty($result);
     }
 }
