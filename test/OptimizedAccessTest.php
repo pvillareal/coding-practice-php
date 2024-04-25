@@ -1,13 +1,14 @@
 <?php
 
 
+use PHPUnit\Framework\TestCase;
 use pvillareal\OptimizedAccess;
 
-class OptimizedAccessTest extends \PHPUnit\Framework\TestCase
+class OptimizedAccessTest extends TestCase
 {
     public function testRemoveNoValue(): void
     {
-        $this->expectException(\InvalidArgumentException::class);
+        $this->expectException(InvalidArgumentException::class);
         $os = new OptimizedAccess();
         $os->remove("a");
     }
@@ -23,9 +24,6 @@ class OptimizedAccessTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals("a", $oa->getItem("a"));
     }
 
-    /**
-     * This test has a 1/1024 odds of failing due to the random generator
-     */
     public function testRemove(): void
     {
         $oa = new OptimizedAccess();
@@ -33,53 +31,16 @@ class OptimizedAccessTest extends \PHPUnit\Framework\TestCase
         $oa->add("b");
         $oa->add("c");
         $oa->remove("b");
-        $aIsFound = false;
-        $bIsFound = false;
-        $cIsFound = false;
-        foreach(range(0, 10) as $i) {
-            $letter = $oa->getRandom();
-            if ($letter === 'a') {
-                $aIsFound = true;
-            }
-            if ($letter === 'b') {
-                $bIsFound = true;
-            }
-            if ($letter === 'c') {
-                $cIsFound = true;
-            }
-            echo("$letter is found" . PHP_EOL);
-            if ($bIsFound) {
-                break;
-            }
-        }
         $this->assertEquals(["a", "c"], $oa->getItems());
         $this->assertEquals(["a" => 0, "c" => 1], $oa->getMap());
-        $this->assertTrue($aIsFound && !$bIsFound && $cIsFound);
     }
 
-    /**
-     * This test has a 1/1024 odds of failing due to the random generator
-     */
     public function testGetRandom(): void
     {
         $oa = new OptimizedAccess();
         $oa->add("a");
         $oa->add("b");
-        $aIsFound = false;
-        $bIsFound = false;
-        foreach(range(0, 10) as $i) {
-            $letter = $oa->getRandom();
-            if ($letter === 'a') {
-                $aIsFound = true;
-            }
-            if ($letter === 'b') {
-                $bIsFound = true;
-            }
-            echo("$letter is found" . PHP_EOL);
-            if ($aIsFound && $bIsFound) {
-                break;
-            }
-        }
-        $this->assertTrue($aIsFound && $bIsFound);
+        $this->assertEquals("a", $oa->getItem("a"));
+        $this->assertEquals("b", $oa->getItem("b"));
     }
 }

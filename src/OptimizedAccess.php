@@ -39,11 +39,6 @@ class OptimizedAccess
 
     }
 
-    public function getRandom() {
-        $index = rand(0, count($this->items) - 1);
-        return $this->items[$index];
-    }
-
     public function getItem($item)
     {
         return $this->items[$this->map[$item]];
