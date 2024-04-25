@@ -36,4 +36,13 @@ class LRUCacheTest extends TestCase
         self::assertEquals(2, $lruCache->get(0), "0 key gets retained");
     }
 
+    public function testArraySearchReturnsTheKeyOfTheArray()
+    {
+        $testArrayKeyVal = [1 => 2, 2 => 4, 3 => 6];
+        self::assertEquals(1, array_search(2, $testArrayKeyVal));
+        self::assertEquals(2, array_search(4, $testArrayKeyVal));
+        self::assertEquals(3, array_search(6, $testArrayKeyVal));
+        self::assertFalse(array_search(8, $testArrayKeyVal));
+    }
+
 }

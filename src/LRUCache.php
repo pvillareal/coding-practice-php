@@ -44,7 +44,7 @@ class LRUCache {
             return false;
         }
         $lruKey = array_search($key, $this->lru);
-        if ($lruKey) {
+        if ($lruKey !== false) {
             unset($this->lru[$lruKey]);
             array_unshift($this->lru, $key);
             return $this->cache[$this->lru[$lruKey]];
