@@ -19,5 +19,5 @@ jobs:
       
       - name: Run PHPUnit
         run: |
-          docker run --rm --interactive --volume $PWD:/app -w /app pvillareal/php:8.3-cli php ./vendor/bin/phpunit
+          docker run --rm --interactive --volume $PWD:/app -w /app php:8.2-cli php ./vendor/bin/phpunit
           
