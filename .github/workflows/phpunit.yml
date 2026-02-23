@@ -4,24 +4,16 @@ on: [push]
 
 env:
   XDEBUG_MODE: coverage
+  PHP_VERSION: 8.2
 
 jobs:
   build-test:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3
-
-      - name: Composer Installs
+      - name: get-lo
         uses: php-actions/composer@v6
-        with:
-          dev: yes
+        run: |
+          docker run --rm --it --tty --volume ${container_workdir}:/app composer/composer
 
-      - name: PHPUnit Tests
-        uses: php-actions/phpunit@v3
-        with:
-          version: 9.6.19
-          php_extensions: xdebug
-          bootstrap: vendor/autoload.php
-          configuration: phpunit.xml
-          memory_limit: 512M
+      
