@@ -13,9 +13,9 @@ jobs:
       - name: Check Out
         uses: actions/checkout@v6
 
-      - name: Run Composer
+      - name: Run Composer Install
         run: |
-          docker run --rm --interactive --volume $GITHUB_WORKSPACE:/app composer/composer dump-autoload
+          docker run --rm --interactive --volume $GITHUB_WORKSPACE:/app composer/composer install
 
       - name: Check BIN
         run: |
