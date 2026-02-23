@@ -9,11 +9,7 @@ env:
 jobs:
   build-test:
     runs-on: ubuntu-latest
-
     steps:
-      - name: get-lo
-        uses: php-actions/composer@v6
+      - name: Run Composer
         run: |
           docker run --rm --it --tty --volume ${container_workdir}:/app composer/composer
-
-      
