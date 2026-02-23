@@ -16,6 +16,10 @@ jobs:
       - name: Run Composer
         run: |
           docker run --rm --interactive --volume $GITHUB_WORKSPACE:/app composer/composer dump-autoload
+
+      - name: Check BIN
+        run: |
+          ls ./vendor/bin
       
       - name: Run PHPUnit
         run: |
