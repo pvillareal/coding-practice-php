@@ -10,6 +10,9 @@ jobs:
   build-test:
     runs-on: ubuntu-latest
     steps:
+      - name: Check Out
+        uses: actions/checkout@v6
+
       - name: Run Composer
         run: |
-          docker run --rm --interactive --tty --volume $container_workdir:/app composer/composer
+          docker run --rm --interactive --tty --volume $GITHUB_WORKSPACE:/app composer/composer
