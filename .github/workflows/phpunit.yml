@@ -12,4 +12,4 @@ jobs:
     steps:
       - name: Run Composer
         run: |
-          docker run --rm --it --tty --volume ${container_workdir}:/app composer/composer
+          docker run --rm --interactive --tty --volume ${container_workdir}:/app composer/composer
