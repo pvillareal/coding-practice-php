@@ -2,6 +2,7 @@
   "name": "villareal.ph/coding_practice",
   "description": "Coding algorithms with PHP",
   "minimum-stability": "dev",
+  "version": "1.0.0",
   "license": "proprietary",
   "authors": [
     {
