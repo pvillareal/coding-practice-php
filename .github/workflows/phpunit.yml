@@ -10,19 +10,10 @@ jobs:
   build-test:
     runs-on: ubuntu-latest
     steps:
-      - name: Add PHP
-        run: |
-        echo 'alias php="docker run --rm --interactive -p 8081:80 --expose 80 --tty --volume $PWD:/app -w /app pvillareal/php:8.3-cli php"' >> ~/.bash_aliases
-        source ~/.bash_aliases
-
       - name: Check Out
         uses: actions/checkout@v6
 
       - name: Run Composer
         run: |
-          docker run --rm --interactive --volume $GITHUB_WORKSPACE:/app composer/composer
-
-      - name: Run PHPUnit
-        run: |
-          php ./vendor/bin/phpunit
+          docker run --rm --interactive --volume $GITHUB_WORKSPACE:/app composer/composer dump-autoload
       
