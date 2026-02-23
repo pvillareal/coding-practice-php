@@ -15,4 +15,4 @@ jobs:
 
       - name: Run Composer
         run: |
-          docker run --rm --interactive --tty --volume $GITHUB_WORKSPACE:/app composer/composer
+          docker run --rm --interactive --volume $GITHUB_WORKSPACE:/app composer/composer
