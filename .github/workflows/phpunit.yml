@@ -14,14 +14,14 @@ jobs:
         uses: actions/checkout@v6
 
       - name: Run Composer Install
-        run: |
-          docker run --rm --interactive --volume $GITHUB_WORKSPACE:/app composer/composer install
+        run: docker run --rm --interactive --volume $GITHUB_WORKSPACE:/app composer/composer install
 
       - name: Check BIN
-        run: |
-          ls ./vendor/bin
+        run: ls ./vendor/bin
       
       - name: Run PHPUnit
-        run: |
-          docker run --rm --interactive --volume $PWD:/app -w /app php:8.3-cli php ./vendor/bin/phpunit
+        run: docker run --rm --interactive --volume $PWD:/app -w /app php:8.3-cli php ./vendor/bin/phpunit
+
+      - name: Run Rector
+        run: docker run --rm --interactive --volume $PWD:/app -w /app php:8.3-cli php ./vendor/bin/rector
           
