@@ -20,7 +20,7 @@ class FinalMockTestTest extends TestCase
     public function testFinalMockRealGetItem()
     {
         $finalMock = new FinalMockTest();
-        self::assertTrue(1 == $finalMock->getItem());
+        self::assertTrue(1 === $finalMock->getItem());
     }
 
 }

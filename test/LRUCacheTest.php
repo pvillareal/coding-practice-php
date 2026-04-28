@@ -1,6 +1,8 @@
 <?php
 
 
+declare(strict_types=1);
+
 use pvillareal\LRUCache;
 use PHPUnit\Framework\TestCase;
 

@@ -16,7 +16,7 @@
     }
   },
   "require-dev": {
-    "rector/rector": "1.0.1",
+    "rector/rector": "2.4.2",
     "phpunit/phpunit": "12.5.23",
     "phpunit/php-code-coverage": "12.5.6",
     "dg/bypass-finals": "*"

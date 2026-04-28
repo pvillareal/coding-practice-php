@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace pvillareal;
 
 class TwoNumberSum
@@ -11,7 +13,7 @@ class TwoNumberSum
         $result = [];
         $left = 0;
         $right = count($nums) - 1;
-        while($left != $right) {
+        while($left !== $right) {
             $sum = $nums[$left] + $nums[$right];
             if ($sum === $total) {
                $result[] = $nums[$left];

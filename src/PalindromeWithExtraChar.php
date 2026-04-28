@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace pvillareal;
 
 final class PalindromeWithExtraChar
@@ -24,7 +26,7 @@ final class PalindromeWithExtraChar
                 }
                 $skips++;
             }
-            if ($skips == 2) {
+            if ($skips === 2) {
                 break;
             }
         }
