@@ -1,12 +1,13 @@
-<?php
+<?php declare(strict_types=1);
 
 
 use PHPUnit\Framework\TestCase;
 use pvillareal\AnagramChecker;
 
-class AnagramsTest extends TestCase
+final class AnagramsTest extends TestCase
 {
 
+    #[Test]
     public function testAnagrams(): void
     {
         $word = "post";
