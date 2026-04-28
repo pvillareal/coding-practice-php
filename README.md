@@ -5,6 +5,11 @@ In a way I guess this is also proof to myself that I know I can answer those que
 ### Why create something like this?
 Practice makes perfect, giving myself some time to produce and perfect the solutions I am thinking of during the interviews.
 
+### add hooks
+```bash
+git config --local core.hooksPath .githooks/
+```
+
 ### Composer
 Tired of having the phar file onto your computer. Add this to your `~/bash_profile`.
 ```bash
